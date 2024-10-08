@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+	box-sizing: border-box;
+}
+
+button:focus, input:focus, textarea:focus {
+	outline: 0;
+}
+
+
+body {
+	background: #292966;
+}
+
+.number_wrapper {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+}
+
+.number_wrapper input[type=number] {
+	--w: 1ch;
+	--g: .15em;
+	--b: 2px;
+	--n: 7;
+
+	--c: #f7f7f7;
+	font-size: 70px;
+	line-height: 1.5;
+	letter-spacing: var(--w);
+	font-family: 'Poppins', sans-serif;
+	width: calc(var(--n)*(1ch + var(--w)));
+	padding-left: 33px;
+	clip-path: inset(0 calc(var(--w)/4) 0 0);
+	background: repeating-linear-gradient(90deg,
+		var(--c) 0 var(--b), #0000 0 calc(1ch + var(--w) - var(--g) - var(--b)),
+		var(--c) 0 calc(1ch + var(--w) - var(--g)), #0000 0 2ch),
+		conic-gradient(at calc(100% - var(--g) - 1px) var(--b), #0000 75%, var(--c) 0)
+		0 0/calc(1ch + var(--w)) calc(100% - var(--b));
+
+	border: none;
+	outline: 0;
+	color: #f7f7f7;
+}
+
+.number_wrapper input[type=number]:focus-visible {
+	color: #ffffff;
+}
